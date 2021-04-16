@@ -1,0 +1,39 @@
+D:\unity\untiy project\Server\SocketMultiplayerGameServer\Program\bin\Debug\Program.exe.config
+D:\unity\untiy project\Server\SocketMultiplayerGameServer\Program\bin\Debug\Program.exe
+D:\unity\untiy project\Server\SocketMultiplayerGameServer\Program\bin\Debug\Program.pdb
+D:\unity\untiy project\Server\SocketMultiplayerGameServer\Program\obj\Debug\SocketMultiplayerGameServer.csprojAssemblyReference.cache
+D:\unity\untiy project\Server\SocketMultiplayerGameServer\Program\obj\Debug\SocketMultiplayerGameServer.csproj.CoreCompileInputs.cache
+D:\unity\untiy project\Server\SocketMultiplayerGameServer\Program\obj\Debug\Program.exe
+D:\unity\untiy project\Server\SocketMultiplayerGameServer\Program\obj\Debug\Program.pdb
+D:\unity\untiy project\Server\SocketMultiplayerGameServer\Program\bin\Debug\Google.Protobuf.dll
+D:\unity\untiy project\Server\SocketMultiplayerGameServer\Program\obj\Debug\SocketMultiplayerGameServer.csproj.CopyComplete
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\Program.exe.config
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\Program.exe
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\Program.pdb
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\BouncyCastle.Crypto.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\Google.Protobuf.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\K4os.Compression.LZ4.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\K4os.Hash.xxHash.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\MySql.Data.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\Renci.SshNet.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\System.Buffers.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\System.Memory.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\Ubiety.Dns.Core.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\Zstandard.Net.dll
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\Google.Protobuf.pdb
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\Google.Protobuf.xml
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\K4os.Compression.LZ4.xml
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\K4os.Hash.xxHash.xml
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\MySql.Data.xml
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\Renci.SshNet.xml
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\System.Buffers.xml
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\System.Memory.xml
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\obj\Debug\SocketMultiplayerGameServer.csprojAssemblyReference.cache
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\obj\Debug\SocketMultiplayerGameServer.csproj.CoreCompileInputs.cache
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\obj\Debug\SocketMultiplayerGameServer.csproj.CopyComplete
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\obj\Debug\Program.exe
+D:\unityProject\Gomoku_2\Server\SocketMultiplayerGameServer\Program\obj\Debug\Program.pdb
