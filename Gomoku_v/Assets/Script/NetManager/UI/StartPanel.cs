@@ -15,7 +15,7 @@ public class StartPanel : BasePanel
 
     private void StartBtnClick()
     {
-        uiMag.PushPanel(PanelType.Logon);
+        uiMag.PushPanel(PanelType.Login);
     }
 
     public override void OnEnter()

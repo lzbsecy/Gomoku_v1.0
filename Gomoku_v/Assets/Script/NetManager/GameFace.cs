@@ -62,4 +62,9 @@ public class GameFace : MonoBehaviour
     {
         requestManager.RemoveRequest(action);
     }
+
+    public void ShowMessage(string str, bool sync = false)
+    {
+        uIManager.ShowMessage(str, sync);
+    }
 }

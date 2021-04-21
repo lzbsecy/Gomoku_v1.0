@@ -14,7 +14,7 @@ public class LogonPanel : BasePanel
     private void Start()
     {
         logonBtn.onClick.AddListener(OnLogonClick);
-        switchBtn.onClick.AddListener(Close);
+        switchBtn.onClick.AddListener(SwitchLogin);
     }
 
     private void OnLogonClick()
@@ -27,9 +27,9 @@ public class LogonPanel : BasePanel
         logonRequest.SendRequest(user.text,pass.text);
     }
 
-    private void Close()
+    private void SwitchLogin()
     {
-        uiMag.PopPanel();
+        uiMag.PushPanel(PanelType.Login);
     }
 
     public override void OnEnter()
