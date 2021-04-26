@@ -19,11 +19,9 @@ namespace SocketMultiplayerGameServer.DAO
             try
             {
                 string sql = "INSERT INTO `socketgame`.`userdata`(`username`,`password`) VALUES ('" + username + "', '" + password + "')";
-                MySqlCommand comd = new MySqlCommand(sql, sqlConnection);
-
-                comd = new MySqlCommand(sql, sqlConnection);
-
-                comd.ExecuteNonQuery();
+                MySqlCommand cmd = new MySqlCommand(sql, sqlConnection);
+                cmd = new MySqlCommand(sql, sqlConnection);
+                cmd.ExecuteNonQuery();
                 return true;
             }
             catch(Exception e)
@@ -32,6 +30,27 @@ namespace SocketMultiplayerGameServer.DAO
                 return false;
             }
 
+        }
+
+        public bool Login(MainPack pack, MySqlConnection sqlConnection)
+        {
+            string username = pack.LoginPack.Username;
+            string password = pack.LoginPack.Password;
+
+            string sql = "SELECT * FROM userdata WHERE username='"+username+"' AND password='"+password+"'";
+            MySqlCommand cmd = new MySqlCommand(sql, sqlConnection);
+            MySqlDataReader read = cmd.ExecuteReader();
+            bool result = read.HasRows;
+            if (result)
+            {
+                Console.WriteLine(username + " 登陆成功!");     
+            }
+            else
+            {
+                Console.WriteLine(username + " 登陆失败!");
+            }
+            read.Close();
+            return result;
         }
 
     }

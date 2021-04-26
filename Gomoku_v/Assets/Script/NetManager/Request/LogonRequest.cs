@@ -7,6 +7,10 @@ using Google;
 public class LogonRequest : BaseRequest
 {
 
+    public LogonPanel logonPanel;
+
+    private MainPack pack = null;
+
     public override void Awake()
     {
         requestCode = RequestCode.User;
@@ -15,25 +19,23 @@ public class LogonRequest : BaseRequest
         base.Awake();
     }
 
+    private void Update()
+    {
+        if(pack!=null)
+        {
+            logonPanel.OnResPonse(pack);
+            pack = null;
+        }
+    }
+
     public override void OnResponse(MainPack pack)
     {
-        switch(pack.ReturnCode)
-        {
-            case ReturnCode.Succeed:
-                face.ShowMessage("注册成功", true);
-                break;
-            case ReturnCode.Fail:
-                face.ShowMessage("注册失败", true);
-                break;
-            default:
-                
-                break;
-        }
-        
+        this.pack = pack;
     }
 
     public void SendRequest(string user,string pass)
     {
+        Debug.Log("send request");
         MainPack pack = new MainPack();
         pack.RequestCode = requestCode;
         pack.ActionCode = actionCode;
@@ -41,7 +43,7 @@ public class LogonRequest : BaseRequest
         LoginPack loginPack = new LoginPack();
         loginPack.Username = user;
         loginPack.Password = pass;
-        
+
         pack.LoginPack = loginPack;
         base.SendRequest(pack);
     }

@@ -25,13 +25,14 @@ public class GameFace : MonoBehaviour
 
     void Awake()
     {
+        uIManager = new UIManager(this);
         clientManager = new ClientManager(this);
         requestManager = new RequestManager(this);
-        uIManager = new UIManager(this);
 
+        uIManager.OnInit();
         clientManager.OnInit();
         requestManager.OnInit();
-        uIManager.OnInit();
+        
     }
 
     private void OnDestroy()

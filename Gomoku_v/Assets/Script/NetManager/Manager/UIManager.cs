@@ -33,14 +33,17 @@ public class UIManager : BaseManager
         base.OnInit();
         InitPanel();
         canvasTransform = GameObject.Find("Canvas").transform;
+
+        PushPanel(PanelType.Message);
         PushPanel(PanelType.Start);
+
     }
 
     /// <summary>
     /// 显示UI
     /// </summary>
     /// <param name="panelType"></param>
-    public void PushPanel(PanelType panelType)
+    public BasePanel PushPanel(PanelType panelType)
     {
         if(panelDict.TryGetValue(panelType,out BasePanel panel))
         {
@@ -51,6 +54,7 @@ public class UIManager : BaseManager
             }
             panelStack.Push(panel);
             panel.OnEnter();
+            return panel;
         }
         else
         {
@@ -63,6 +67,7 @@ public class UIManager : BaseManager
             }
             panelStack.Push(tempPanel);
             tempPanel.OnEnter();
+            return tempPanel;
         }
     }
 
@@ -108,11 +113,13 @@ public class UIManager : BaseManager
     private void InitPanel()
     {
         string panelpath = "Panel/";
-        string[] path = new string[] { "MessagePanel", "StartPanel", "LoginPanel", "LogonPanel" };
+        string[] path = new string[] { "MessagePanel", "StartPanel", "LoginPanel", "LogonPanel", "RoomListPanel", "RoomPanel" };
         panelPath.Add(PanelType.Message, panelpath + path[0]);
         panelPath.Add(PanelType.Start, panelpath + path[1]);
         panelPath.Add(PanelType.Login, panelpath + path[2]);
         panelPath.Add(PanelType.Logon, panelpath + path[3]);
+        panelPath.Add(PanelType.RoomList, panelpath + path[4]);
+        panelPath.Add(PanelType.Room, panelpath + path[5]);
     }
 
     public void SetMessagePanel(MessagePanel message)

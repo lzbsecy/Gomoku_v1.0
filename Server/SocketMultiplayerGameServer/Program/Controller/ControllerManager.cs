@@ -21,6 +21,8 @@ namespace SocketMultiplayerGameServer.Controller
 
             UserController userController = new UserController();
             controlDict.Add(userController.GetRequestcode,userController);
+            RoomController roomController = new RoomController();
+            controlDict.Add(roomController.GetRequestcode, roomController);
         }
 
         public void HandleRequest(MainPack pack,Client client)

@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2246091614301850211}
+  - component: {fileID: 4348659075184712076}
+  - component: {fileID: 7248837480484916002}
+  - component: {fileID: 6616969224115134171}
   m_Layer: 5
   m_Name: RoomPanel
   m_TagString: Untagged
@@ -37,6 +40,49 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -700, y: -1322}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4348659075184712076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246091614301850208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89ffd0f57401134cb1a0f6c96e59c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backBtn: {fileID: 2246091615136437983}
+  startBtn: {fileID: 2246091614624683783}
+  content: {fileID: 2246091614523919178}
+  userItem: {fileID: 929453818231719553, guid: 3e792c889443439429727b450be1673b, type: 3}
+  exitRoomRequest: {fileID: 6616969224115134171}
+--- !u!114 &7248837480484916002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246091614301850208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342acb7b039f2794ebf17c842ad39217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomPanel: {fileID: 4348659075184712076}
+--- !u!114 &6616969224115134171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246091614301850208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe09230cb96da054c89cdf2622fc0c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomPanel: {fileID: 4348659075184712076}
 --- !u!1 &2246091614523919179
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,10 +136,10 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 390, y: 100}
+  m_CellSize: {x: 800, y: 100}
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -322,7 +368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -507.4}
+  m_AnchoredPosition: {x: 0, y: -499}
   m_SizeDelta: {x: 800, y: 315.22815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2246091614980119232

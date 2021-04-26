@@ -6,6 +6,8 @@ enum RequestCode
 	RequestNone=0;
 	//用户
 	User=1; 
+	//房间
+	Room=2;
 }
 
 enum ActionCode
@@ -15,6 +17,16 @@ enum ActionCode
 	Logon =1;  
 	// 登录
 	Login =2;   
+	//创建房间
+	CreateRoom=3;
+	//查询房间
+	SearchRoom=4;
+	//获取玩家列表
+	PlayerList=5;
+	//加入房间
+	JoinRoom=6;
+	//离开房间
+	Exit=7;
 }
 
 enum ReturnCode
@@ -24,6 +36,8 @@ enum ReturnCode
 	Succeed =1;
 	//失败
 	Fail =2;
+	//没有房间
+	NotRoom=3;
 }
 
 message MainPack
@@ -32,6 +46,10 @@ message MainPack
 	ActionCode actionCode = 2;
 	ReturnCode returnCode = 3;
 	LoginPack loginPack=4;
+	//填充长度
+	string str = 5;
+	repeated RoomPack roomPack=6;
+	repeated PlayerPack playerPack=7;
 }
 
 message LoginPack
@@ -40,4 +58,23 @@ message LoginPack
 	string username=1;
 	//密码
 	string password= 2;
+}
+
+message RoomPack
+{
+	//房间
+	string roomName=1;
+	//房间最大人数
+	int32 maxNum=2;
+	//房间当前人数
+	int32 curNum=3;
+	//房间状态
+	int32 roomState=4;		
+}
+
+message PlayerPack
+{
+	//玩家名称
+	string playerName=1;
+	
 }

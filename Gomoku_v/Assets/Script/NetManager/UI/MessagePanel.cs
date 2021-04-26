@@ -12,8 +12,9 @@ public class MessagePanel : BasePanel
     public override void OnEnter()
     {
         base.OnEnter();
-        uiMag.SetMessagePanel(this);
         text.CrossFadeAlpha(0, 0.1f, false);
+        uiMag.SetMessagePanel(this);
+        
     }
 
     private void Update()
@@ -27,6 +28,7 @@ public class MessagePanel : BasePanel
 
     public void ShowMessage(string str ,bool sync = false)
     {
+        Debug.Log("Message:" + "  " + str + "  ");
         if(sync)
         {
             //异步显示
@@ -47,6 +49,6 @@ public class MessagePanel : BasePanel
 
     private void HideText()
     {
-        text.CrossFadeAlpha(1, 0.1f, false);
+        text.CrossFadeAlpha(0, 0.1f, false);
     }
 }

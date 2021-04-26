@@ -21,9 +21,24 @@ namespace SocketMultiplayerGameServer.Servers
 
         private const string connstr = "database=socketgame;data source = 127.0.0.1;user=root;password=machunyang;pooling = false;charset=utf8;port=3306";
 
+        public string UserName
+        {
+            get; set;
+        }
+
         public UserData GetUserData
         {
             get { return userData; }
+        }
+
+        public Room GetRoom
+        {
+            get;set;
+        }
+
+        public MySqlConnection GetMySqlConnect
+        {
+            get { return sqlConnection; }
         }
 
         public Client(Socket socket,Server server)
@@ -55,15 +70,17 @@ namespace SocketMultiplayerGameServer.Servers
                 int len = socket.EndReceive(iar);
                 if (len == 0)
                 {
+                    Close();
                     return;
                 }
 
                 message.ReadBuffer(len,HandleRequest);
                 StartRecive();
             }
-            catch
-            {
-
+            catch(Exception e)
+            { 
+                Console.WriteLine(e.Message);
+                Close();
             }
         }
 
@@ -77,13 +94,12 @@ namespace SocketMultiplayerGameServer.Servers
             server.HandleRequest(pack, this);
         }
 
-        public bool Logon(MainPack pack)
-        {
-            return GetUserData.Logon(pack,sqlConnection);
-        }
-
         private void Close()
         {
+            if(GetRoom != null)
+            {
+                GetRoom.Exit(server,this);
+            }
             server.RemoveClient(this);
             socket.Close();
             sqlConnection.Close();

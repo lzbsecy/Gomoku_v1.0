@@ -34,12 +34,19 @@ public class ClientManager : BaseManager
         socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         try
         {
-            socket.Connect("127.0.0.1", 6666);
+            //10.51.96.91 本机
+            //82.156.215.225 服务器
+            socket.Connect("10.51.96.91", 6666);
+            //连接成功
             StartReceive();
+            Debug.Log("连接成功!");
+            face.ShowMessage("连接成功!");
         }
         catch(Exception e)
         {
+            //连接出错
             Debug.LogWarning(e);
+            face.ShowMessage("连接失败!");
         }
     }
 

@@ -21,7 +21,7 @@ namespace SocketMultiplayerGameServer.Controller
         /// <returns></returns>
         public MainPack Logon(Server server,Client client,MainPack pack)
         {
-            if(client.Logon(pack))
+            if(client.GetUserData.Logon(pack,client.GetMySqlConnect))
             {
                 pack.ReturnCode = ReturnCode.Succeed;
             }
@@ -36,19 +36,19 @@ namespace SocketMultiplayerGameServer.Controller
         /// 登录
         /// </summary>
         /// <returns></returns>
-        //public MainPack Login(Server server, Client client, MainPack pack)
-        //{
-        //    if (client.GetUserData.Login(pack, client.GetMysqlConnect))
-        //    {
-        //        pack.Returncode = ReturnCode.Succeed;
-        //        client.GetUserInFo.UserName = pack.Loginpack.Username;
-        //    }
-        //    else
-        //    {
-        //        pack.Returncode = ReturnCode.Fail;
-        //    }
-        //    return pack;
-        //}
+        public MainPack Login(Server server, Client client, MainPack pack)
+        {
+            if (client.GetUserData.Login(pack, client.GetMySqlConnect))
+            {
+                pack.ReturnCode = ReturnCode.Succeed;
+                client.UserName = pack.LoginPack.Username;
+            }
+            else
+            {
+                pack.ReturnCode = ReturnCode.Fail;
+            }
+            return pack;
+        }
 
     }
 }
